@@ -11,7 +11,7 @@ Este repositório combina as atualizações de https://travis-ci.com/flavienbwk/
 
 <p align="center">Status: testado e funcionando :heavy_check_mark:</p>
 
-## Para saber
+## Sobre
 
 Um espelho de arquivo do Ubuntu pode **[atualizar a cada 6 horas](https://wiki.ubuntu.com/Mirrors)** (4 vezes ao dia, dependendo do fuso horário da localização do espelho). Para evitar uma sincronização ruim, inicie a sincronização do seu espelho cerca de 15 minutos após a meia-noite, 6h, meio-dia ou 18h (considerando o fuso horário do espelho).
 
