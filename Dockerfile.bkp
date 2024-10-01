@@ -1,0 +1,30 @@
+FROM debian:buster-slim
+
+# Atualize a lista de pacotes e instale as dependências necessárias
+RUN apt-get update && apt-get install -y \
+    gcc \
+    make \
+    perl \
+    wget \
+    rsync \
+    xz-utils \
+    apt-mirror \
+    --no-install-recommends
+
+# Defina o diretório de trabalho
+WORKDIR /apt-mirror
+
+# Copie os arquivos necessários para o diretório de trabalho dentro do container
+COPY ./apt-mirror /apt-mirror
+COPY ./.perltidyrc /apt-mirror
+COPY ./Makefile /apt-mirror
+COPY ./mirror.list /apt-mirror
+COPY ./postmirror.sh /apt-mirror
+
+# Compile e instale o apt-mirror
+RUN make
+RUN make install
+
+# Executa o espelhamento com o apt-mirror e o script postmirror
+CMD ["bash", "-c", "apt-mirror && bash /apt-mirror/postmirror.sh"]
+
