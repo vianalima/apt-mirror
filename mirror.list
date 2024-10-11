@@ -16,16 +16,16 @@ set proxy_user        user
 set proxy_password    password
 
 #Ubuntu
-deb http://br.archive.ubuntu.com/ubuntu lunar main restricted
-deb http://br.archive.ubuntu.com/ubuntu lunar-updates main restricted
-deb http://br.archive.ubuntu.com/ubuntu lunar universe
-deb http://br.archive.ubuntu.com/ubuntu lunar-updates universe
-deb http://br.archive.ubuntu.com/ubuntu lunar multiverse
-deb http://br.archive.ubuntu.com/ubuntu lunar-updates multiverse
-deb http://br.archive.ubuntu.com/ubuntu lunar-backports main restricted universe multiverse
-deb http://br.archive.ubuntu.com/ubuntu lunar-security main restricted
-deb http://br.archive.ubuntu.com/ubuntu lunar-security universe
-deb http://br.archive.ubuntu.com/ubuntu lunar-security multiverse
+#deb http://br.archive.ubuntu.com/ubuntu lunar main restricted
+#deb http://br.archive.ubuntu.com/ubuntu lunar-updates main restricted
+#deb http://br.archive.ubuntu.com/ubuntu lunar universe
+#deb http://br.archive.ubuntu.com/ubuntu lunar-updates universe
+#deb http://br.archive.ubuntu.com/ubuntu lunar multiverse
+#deb http://br.archive.ubuntu.com/ubuntu lunar-updates multiverse
+#deb http://br.archive.ubuntu.com/ubuntu lunar-backports main restricted universe multiverse
+#deb http://br.archive.ubuntu.com/ubuntu lunar-security main restricted
+#deb http://br.archive.ubuntu.com/ubuntu lunar-security universe
+#deb http://br.archive.ubuntu.com/ubuntu lunar-security multiverse
 
 
 
@@ -45,4 +45,3 @@ clean http://archive.ubuntu.com/ubuntu
 
 # Elastic Stack 8.x
 deb https://artifacts.elastic.co/packages/oss-8.x/apt stable main
-

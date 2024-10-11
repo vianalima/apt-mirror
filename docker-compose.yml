@@ -1,12 +1,12 @@
 version: '3'
 
-services: 
+services:
 
-    mirror:
+    prod:
         build: .
         command: bash -c "apt-mirror && bash /apt-mirror/postmirror.sh"
         volumes:
-            - "./mirror:/var/spool/apt-mirror"
+            - "./repo/prod:/var/spool/apt-mirror"
 
     server:
         build:
@@ -15,6 +15,22 @@ services:
         restart: always
         command: [nginx-debug, '-g', 'daemon off;']
         volumes:
-            - "./mirror/mirror:/mirror:ro"
+            - "./repo:/mirror:ro"
         ports:
             - "8080:80"
+
+    hom:
+        build: .
+        command: bash -c "apt-mirror && bash /apt-mirror/postmirror.sh"
+        volumes:
+            - "./repo/hom:/var/spool/apt-mirror"
+    des:
+        build: .
+        command: bash -c "apt-mirror && bash /apt-mirror/postmirror.sh"
+        volumes:
+            - "./repo/des:/var/spool/apt-mirror"
+    lab:
+        build: .
+        command: bash -c "apt-mirror && bash /apt-mirror/postmirror.sh"
+        volumes:
+            - "./repo/lab:/var/spool/apt-mirror"
